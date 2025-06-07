@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Özür Dilerim Sevgilim</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+  body {
+    margin:0; padding:0;
+    font-family: 'Quicksand', sans-serif;
+    background: #fff0f5;
+    color: #5a2a50;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffe6f2;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.3);
+    position: relative;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #a83279;
+    font-size: 1.8rem;
+  }
+  p.main-message {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  .floating-messages {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  .msg-box {
+    position: absolute;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(168, 82, 132, 0.2);
+    color: #5a2a50;
+    user-select: none;
+    max-width: 220px;
+    opacity: 0.9;
+    animation: floatup 6s ease-in-out infinite alternate;
+  }
+  /* Farklı animasyon gecikmeleri ile doğal hareket */
+  .msg-box:nth-child(1) { top: 20px; left: 10px; animation-delay: 0s;}
+  .msg-box:nth-child(2) { top: 70px; right: 20px; animation-delay: 1.5s;}
+  .msg-box:nth-child(3) { top: 150px; left: 40px; animation-delay: 3s;}
+  .msg-box:nth-child(4) { top: 180px; right: 60px; animation-delay: 2s;}
+  .msg-box:nth-child(5) { top: 100px; left: 300px; animation-delay: 4.5s;}
+  .msg-box:nth-child(6) { top: 250px; right: 10px; animation-delay: 3.5s;}
+  .msg-box:nth-child(7) { top: 220px; left: 250px; animation-delay: 1s;}
+  .msg-box:nth-child(8) { top: 40px; right: 260px; animation-delay: 2.5s;}
+
+  @keyframes floatup {
+    0% { transform: translateY(0); opacity: 0.9;}
+    100% { transform: translateY(-15px); opacity: 0.6;}
+  }
+  .question {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .question p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(168, 82, 132, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  button#yes {
+    background-color: #db4f82;
+    color: white;
+  }
+  button#yes:hover {
+    background-color: #a83279;
+  }
+  button#no {
+    background-color: #a4a4a4;
+    color: white;
+  }
+  button#no:hover {
+    background-color: #7a7a7a;
+  }
+  /* Hayır cevabı sonrası ekran */
+  #no-message {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #a83279;
+    opacity: 0;
+    animation: fadein 1s forwards;
+  }
+  @keyframes fadein {
+    to {opacity: 1;}
+  }
+  /* Kalp animasyonu */
+  .heart {
+    display: inline-block;
+    color: #db4f82;
+    animation: heartbeat 1.5s infinite;
+    font-size: 1.5rem;
+    margin-left: 8px;
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1);}
+    50% { transform: scale(1.3);}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Özür Dilerim Sevgilim <span class="heart">❤️</span></h1>
+  <p class="main-message">
+    Senin hevesini kırmak istemezdim.<br />
+    Tam tersi, senin heves ettiğin şeyleri en mutlu şekilde yaşamanı isterim.
+  </p>
+  <div class="floating-messages">
+    <div class="msg-box">Güzelim, bunu telafi etmek istiyorum.</div>
+    <div class="msg-box">İçim buruk, çünkü sen üzgünsün.</div>
+    <div class="msg-box">Esmam, affet desen içim huzurla dolacak.</div>
+    <div class="msg-box">Bazen kelimeler yetmiyor ama kalbim burada.</div>
+    <div class="msg-box">Affetmek zor biliyorum… ama seni kaybetmek daha zor.</div>
+    <div class="msg-box">Bu sitenin her satırında sadece sen varsın.</div>
+    <div class="msg-box">Ben senin en çok gülmeni seviyorum, o yüzden gülmeni hiç eksik etme, olur mu?</div>
+    <div class="msg-box">Seni kırmak istemezdim.</div>
+  </div>
+  <div class="question">
+    <p>Peki... beni affediyor musun?</p>
+    <div class="buttons">
+      <button id="yes">Evet</button>
+      <button id="no">Hayır</button>
+    </div>
+  </div>
+  <div id="no-message">
+    Ama ben seni gerçekten çok seviyorum…<br />
+    <small>Ben burada olmaya devam edeceğim…</small>
+  </div>
+</div>
+
+<script>
+  const yesBtn = document.getElementById('yes');
+  const noBtn = document.getElementById('no');
+  const noMsg = document.getElementById('no-message');
+  const questionDiv = document.querySelector('.question');
+
+  yesBtn.addEventListener('click', () => {
+    questionDiv.innerHTML = '<p>Seni çok seviyorum, Esmam <span class="heart">❤️</span></p>';
+  });
+
+  noBtn.addEventListener('click', () => {
+    questionDiv.style.display = 'none';
+    noMsg.style.display = 'block';
+    noMsg.style.opacity = '0';
+    setTimeout(() => {
+      noMsg.style.opacity = '1';
+    }, 50);
+  });
+</script>
+</body>
+</html>
