@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Özür Dilerim Sevgilim</title>
+<style>
+  body {
+    background: #fff8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    min-height: 100vh;
+  }
+  .card {
+    background: #ffe6e6;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+    padding: 15px 20px;
+    max-width: 220px;
+    font-size: 16px;
+    color: #5a2a2a;
+    position: relative;
+    user-select: none;
+  }
+  .card:nth-child(2) { background: #fff0f5; box-shadow: 0 4px 8px rgba(219,112,147,0.3);}
+  .card:nth-child(3) { background: #ffe4e1; box-shadow: 0 4px 8px rgba(255,105,180,0.4);}
+  .card:nth-child(4) { background: #fffaf0; box-shadow: 0 4px 8px rgba(255,160,122,0.4);}
+  .card:nth-child(5) { background: #fff0f5; box-shadow: 0 4px 8px rgba(255,182,193,0.4);}
+  .card:nth-child(6) { background: #fff5f5; box-shadow: 0 4px 8px rgba(255,192,203,0.4);}
+  .card:nth-child(7) { background: #ffe4e1; box-shadow: 0 4px 8px rgba(219,112,147,0.4);}
+  .card:nth-child(8) { background: #fffaf0; box-shadow: 0 4px 8px rgba(255,160,122,0.4);}
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    color: #b33a3a;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    user-select: none;
+  }
+  .buttons {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+  }
+  button {
+    background: #ff6f91;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 12px 30px;
+    margin: 0 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(255, 111, 145, 0.5);
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  button:hover {
+    background: #ff4f75;
+  }
+  #response {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffd6dd;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(255,111,145,0.6);
+    padding: 30px 25px;
+    font-size: 1.3em;
+    color: #7a2e35;
+    text-align: center;
+    user-select: none;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>Özür Dilerim Sevgilim ❤️</h1>
+
+<div class="card">Senin hevesini kırmak istemezdim. Tam tersi, senin heves ettiğin şeyleri en mutlu şekilde yaşamanı isterim.</div>
+<div class="card">Güzelim, bunu telafi etmek istiyorum.</div>
+<div class="card">Bazen kelimeler yetmiyor ama kalbim burada.</div>
+<div class="card">Bu sitenin her satırında sadece sen varsın.</div>
+<div class="card">Ben senin en çok gülmeni seviyorum, o yüzden gülmeni hiç eksik etme, olur mu?</div>
+<div class="card">İçim buruk, çünkü sen üzgünsün.</div>
+<div class="card">Hayır butonuna tıkladığında: "Ama ben seni gerçekten çok seviyorum..."</div>
+
+<div class="buttons">
+  <button id="yesBtn">Evet</button>
+  <button id="noBtn">Hayır</button>
+</div>
+
+<div id="response"></div>
+
+<script>
+  const response = document.getElementById('response');
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+
+  yesBtn.onclick = () => {
+    response.style.display = 'block';
+    response.textContent = "Esmam, affet desen içim huzurla dolacak.";
+  };
+
+  noBtn.onclick = () => {
+    response.style.display = 'block';
+    response.textContent = "Ama ben seni gerçekten çok seviyorum...";
+  };
+</script>
+
+</body>
+</html>
